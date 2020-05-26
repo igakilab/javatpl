@@ -44,12 +44,12 @@ else
   fi
 fi
 
-localdir="/home/${CLASSNAME}/local"
+localdir="/home/${CLASSNAME}/$COURSEYEAR/local"
 
 echo "各種コマンドを更新します．"
 rsync -a --checksum --timeout=15 --delete ${localdir}/ /usr/local/
 
-profiledir="/home/${CLASSNAME}/etc"
+profiledir="/home/${CLASSNAME}/$COURSEYEAR/etc"
 echo "各種設定を更新します．"
 rsync -a --checksum --timeout=15 ${profiledir}/ /etc/
 

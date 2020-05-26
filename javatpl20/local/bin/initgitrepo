@@ -40,9 +40,9 @@ cd /home/${CLASSNAME}
 git init &>/dev/null
 git config core.sparsecheckout true
 git remote add origin https://github.com/igakilab/${CLASSNAME}.git
-echo $COURSEYEAR > .git/info/sparse-checkout
-echo local >> .git/info/sparse-checkout
-echo etc >> .git/info/sparse-checkout
+echo $COURSEYEAR/env > .git/info/sparse-checkout
+echo $COURSEYEAR/etc >> .git/info/sparse-checkout
+echo $COURSEYEAR/local >> .git/info/sparse-checkout
 
 echo "開発環境データを取得します"
 echo -n "ダウンロード中........."
