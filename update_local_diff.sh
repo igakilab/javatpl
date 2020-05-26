@@ -1,14 +1,12 @@
 #/bin/bash
 
-class=javatpl20
-
-INSTALLED=/C/oit/${class}/PortableGit-2.25.0-64
+INSTALLED=/C/oit/${COURSEYEAR}/PortableGit-2.25.0-64
 INSTALLED_ETC=${INSTALLED}/etc/
 INSTALLED_BIN=${INSTALLED}/usr/local/bin/
 
 REPO=./PortableGit
-REPO_ETC=${class}/etc/
-REPO_BIN=${class}/local/bin/
+REPO_ETC=${COURSEYEAR}/etc/
+REPO_BIN=${COURSEYEAR}/local/bin/
 
 function ConfirmExecution() {
 

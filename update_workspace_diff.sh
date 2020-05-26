@@ -2,7 +2,7 @@
 
 INSTALLED=~/kadai/$COURSEYEAR/
 
-REPO=./workspace/
+REPO=./$COURSEYEAR/env/
 
 function ConfirmExecution() {
 
@@ -69,6 +69,10 @@ function RsyncEnvironment() {
         --include='*/'  \
         --include='.version'  \
         --include='settings.json'  \
+        --include='launch.json'  \
+        --include='org.eclipse.jdt.core.prefs'  \
+        --include='.classpath'  \
+        --include='.project'  \
         --exclude='*'  \
         "$1" "$2"
 
