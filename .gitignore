@@ -1,3 +1,2 @@
 *.class
-*.syso
-*.exe
+javatpl-bash/**/*.syso
