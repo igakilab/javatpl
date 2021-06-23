@@ -80,7 +80,7 @@ function RsyncEnvironment() {
 
 function UpdateVersionNumber() {
   echo "./log/.versionを更新します"
-  echo [isdev_workspace]`date "+%Y%m%d%H%M"` > ${INSTALLED}.log/.version
+  echo [${COURSEYEAR}_workspace]`date "+%Y%m%d%H%M"` > ${INSTALLED}.log/.version
 }
 
 function CheckDiff() {
