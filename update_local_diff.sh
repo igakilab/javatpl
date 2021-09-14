@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 INSTALLED=/C/oit/${COURSEYEAR}/PortableGit-2.25.0-64
 INSTALLED_ETC=${INSTALLED}/etc/
