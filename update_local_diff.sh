@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INSTALLED=/C/oit/${COURSEYEAR}/PortableGit-2.25.0-64
+INSTALLED=/C/oit/${COURSEYEAR}-byod/PortableGit-2.35.2-64
 INSTALLED_ETC=${INSTALLED}/etc/
 INSTALLED_BIN=${INSTALLED}/usr/local/bin/
 
