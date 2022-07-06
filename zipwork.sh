@@ -1,3 +1,3 @@
 #/bin/sh
 
-zip -r javatpl21_`date "+%y%m%d%H%M%S"`.zip javatpl21/env -x "*.class" -x "*.exe"
+zip -r javatpl22_`date "+%y%m%d%H%M%S"`.zip javatpl22/env -x "*.class" -x "*.exe"
