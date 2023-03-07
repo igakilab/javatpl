@@ -1,0 +1,29 @@
+{
+  "terminal.integrated.defaultProfile.windows": "GitBash",
+  "terminal.integrated.profiles.windows": {
+    "GitBash": {
+      "path": "C:\\oit\\javatpl23-byod\\PortableGit-2.39.2-64\\bin\\bash.exe",
+      "args": [
+        "-l"
+      ]
+    }
+  },
+  "terminal.integrated.env.windows": {
+    "MSYSTEM": "MINGW64",
+    "CHERE_INVOKING": "1"
+  },
+  "java.jdt.ls.java.home": "c:\\oit\\javatpl23-byod\\amazonjdk11.0.18_10",
+  "java.jdt.ls.vmargs": "-noverify -Dfile.encoding=utf8 -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication",
+  "update.enableWindowsBackgroundUpdates": false,
+  "update.mode": "none",
+  "update.showReleaseNotes": false,
+  "extensions.autoUpdate": false,
+  "extensions.autoCheckUpdates": false,
+  "extensions.ignoreRecommendations": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "java.import.generatesMetadataFilesAtProjectRoot": false, //.projectなどの場所
+  "java.semanticHighlighting.enabled": true,
+  "window.zoomLevel": 1,
+  "telemetry.telemetryLevel": "off",
+}

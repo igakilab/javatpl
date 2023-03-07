@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INSTALLED=/C/oit/${COURSEYEAR}-byod/PortableGit-2.35.2-64
+INSTALLED=/C/oit/${COURSEYEAR}-byod/`coursegit`
 INSTALLED_ETC=${INSTALLED}/etc/
 INSTALLED_BIN=${INSTALLED}/usr/local/bin/
 
@@ -122,8 +122,8 @@ diff ${INSTALLED_BIN} ${REPO_BIN}
 # arg $1 is local
 function UpdateVersionNumber() {
   echo "getversionを更新します"
-  sed -i -E "s/\[localenv\][0-9]{12}/\[localenv\]`date "+%Y%m%d%H%M"`/g" ${INSTALLED_BIN}getversion
-  sed -i -E "s/\[localenv\][0-9]{8}/\[localenv\]`date "+%Y%m%d"`/g" ${INSTALLED_BIN}getversion
+  sed -i -E "s/\[local\][0-9]{12}/\[localenv\]`date "+%Y%m%d%H%M"`/g" ${INSTALLED_BIN}getversion
+  sed -i -E "s/\[local\][0-9]{8}/\[localenv\]`date "+%Y%m%d"`/g" ${INSTALLED_BIN}getversion
 }
 
 RsyncEnvironment ${INSTALLED_ETC} ${REPO_ETC} --dry-run
