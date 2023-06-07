@@ -32,6 +32,7 @@
     "*.class",
   ],
   "editor.codeLens": false,
+  "editor.inlayHints.enabled": "offUnlessPressed",
   "editor.renderWhitespace": "boundary",
   "editor.fontFamily": "Consolas, monospace",
   "editor.fontSize": 15,
