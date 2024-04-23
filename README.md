@@ -51,6 +51,13 @@ $ getenv
 .project
 ```
 
+## vscode拡張
+- Japanese Language Pack
+- Language Support for Java
+- Debugger for Java
+- Local History
+- EvilInspector
+
 ## 開発(学生の立場から)の流れ
 ### vscodeの起動及びファイル編集
 - `C:\oit\vscode-portable-win64-1.XX.Y-Z\vscode-portable.exe` をダブルクリックして起動する
