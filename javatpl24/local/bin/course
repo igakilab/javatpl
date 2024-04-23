@@ -1,6 +1,6 @@
 #!/bin/sh
 if [ "$#"  = "1" ] && [ "$1" = "-v" ]; then
-    echo "javatpl23"
+    echo "javatpl24"
 else
     echo "javatpl"
 fi

@@ -63,6 +63,7 @@ rsync --timeout=15 --force -avu ${DFLAG} \
         --exclude='*.exe'   \
         --exclude='*.o'     \
         --exclude='*.class' \
+        --exclude='*.lock' \
         --exclude='*~'      \
         --exclude='.vscode' \
         --exclude='.log' \
@@ -72,6 +73,7 @@ rsync --timeout=15 --force -avu ${DFLAG} \
 if [ $? -gt 0 ]; then
   echo -e "${RB}rsyncは失敗しました．${RE} `date`"
   if [[ -f ~/kadai/.up ]]; then
+    cat ~/kadai/.error
     rm ~/kadai/.up
     rm ~/kadai/.error
   fi

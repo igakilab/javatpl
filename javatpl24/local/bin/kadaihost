@@ -23,7 +23,7 @@ HOSTS1=(
     150.89.15.112       #o-ssh.center.oit.ac.jp(2)
     150.89.15.113       #o-ssh.center.oit.ac.jp(3)
     150.89.15.114       #o-ssh.center.oit.ac.jp(4)
-    o-vnc.center.oit.ac.jp       #o-vnc.center.oit.ac.jp
+    h-ssh101.ad.oit.ac.jp       #h-ssh101.ad.oit.ac.jp
 )
 
 HOSTS2=(

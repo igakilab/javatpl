@@ -50,7 +50,10 @@ echo "各種コマンドを更新します．"
 rsync -a --checksum --timeout=15 --delete ${localdir}/ /usr/local/
 
 profiledir="/home/${CLASSNAME}/$COURSEYEAR/etc"
+vscoderepo="/home/${CLASSNAME}/$COURSEYEAR/vscode/settings.json"
+vscodelocal="/c/oit/${BYOD}/`/usr/local/bin/coursevscode`/data/user-data/User/settings.json"
 echo "各種設定を更新します．"
+rsync -a --checksum --timeout=15 ${vscoderepo} ${vscodelocal}
 rsync -a --checksum --timeout=15 ${profiledir}/ /etc/
 
 if [ $? -ne 0 ]; then

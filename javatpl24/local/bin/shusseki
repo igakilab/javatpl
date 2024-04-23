@@ -47,9 +47,9 @@ echo "[Shusseki Start]#`date +'%s'`" >> "${HISTFILE}"
 INTERVAL="30"
 echo -e "==== 今から${INTERVAL}秒ごとに課題を提出します ===="
 /usr/local/bin/upkadai
-find ~/kadai/`/usr/local/bin/course`/ -not -path '*/.git/*' -not -path '*/.log/*' -not -name '.*' -not -name '*.class' -ls > ~/kadai/.found
+find ~/kadai/$COURSEYEAR/ -not -path '*/.git/*' -not -path '*/.log/*' -not -name '.*' -not -name '*.class' -ls > ~/kadai/.found
 while :; do
-    find ~/kadai/`/usr/local/bin/course`/ -not -path '*/.git/*' -not -path '*/.log/*' -not -name '.*' -not -name '*.class' -ls > ~/kadai/.tmp
+    find ~/kadai/$COURSEYEAR/ -not -path '*/.git/*' -not -path '*/.log/*' -not -name '.*' -not -name '*.class' -ls > ~/kadai/.tmp
     if diff ~/kadai/.tmp ~/kadai/.found > /dev/null; then
       #echo "sleep_if $INTERVAL"
       sleep $INTERVAL
