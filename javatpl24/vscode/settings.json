@@ -26,4 +26,14 @@
   "java.semanticHighlighting.enabled": true,
   "window.zoomLevel": 1,
   "telemetry.telemetryLevel": "off",
+  "local-history.maxDisplay": 10, //Local History関連
+  "local-history.path": "${workspaceFolder}/.log",
+  "local-history.enabled": 2, // Save only files within workspaceFolder
+  "local-history.exclude": [
+    "**/.history /**",
+    "**/.vscode**",
+    "**/.log**",
+    "**/bin/**",
+    "*.class",
+  ],
 }

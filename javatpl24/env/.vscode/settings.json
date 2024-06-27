@@ -21,16 +21,6 @@
   "files.insertFinalNewline": true, // ファイルの保存時に末尾を改行
   "files.trimFinalNewlines": true, // ファイルの保存時に最終行以降をトリミング
   "files.trimTrailingWhitespace": true, // ファイルの保存時に行末の空白をトリミング
-  "local-history.maxDisplay": 10, //Local History関連
-  "local-history.path": "${workspaceFolder}/.log",
-  "local-history.enabled": 2, // Save only files within workspaceFolder
-  "local-history.exclude": [
-    "**/.history /**",
-    "**/.vscode**",
-    "**/.log**",
-    "**/bin/**",
-    "*.class",
-  ],
   "editor.codeLens": false,
   "editor.inlayHints.enabled": "offUnlessPressed",
   "editor.renderWhitespace": "boundary",
