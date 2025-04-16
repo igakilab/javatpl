@@ -1,6 +1,6 @@
 #!/bin/sh
 if [ "$#"  = "1" ] && [ "$1" = "-v" ]; then
-    echo "amazonjdk21.0.3_9"
+    echo "amazonjdk21.0.6_7"
 else
-    echo "amazonjdk21.0.3_9"
+    echo "amazonjdk21.0.6_7"
 fi
