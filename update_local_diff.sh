@@ -1,12 +1,15 @@
 #!/bin/bash
 
-INSTALLED=/C/oit/${COURSEYEAR}-byod/`coursegit`
+INSTALLED=/c/oit/${BYOD}/`/usr/local/bin/coursegit`
+#INSTALLED_VSC=/c/oit/${BYOD}/`/usr/local/bin/coursevscode`/data/appdata/Code/User/settings.json
+INSTALLED_VSC=/c/oit/${BYOD}/`/usr/local/bin/coursevscode`/data/user-data/User/settings.json
 INSTALLED_ETC=${INSTALLED}/etc/
 INSTALLED_BIN=${INSTALLED}/usr/local/bin/
 
 REPO=./PortableGit
 REPO_ETC=${COURSEYEAR}/etc/
 REPO_BIN=${COURSEYEAR}/local/bin/
+REPO_VSC=${COURSEYEAR}/vscode/settings.json
 
 function ConfirmExecution() {
 
@@ -26,6 +29,7 @@ function ConfirmExecution() {
     ConfirmVersionUpdate
     RsyncEnvironment ${INSTALLED_ETC} ${REPO_ETC}
     RsyncEnvironment ${INSTALLED_BIN} ${REPO_BIN}
+    RsyncEnvironment ${INSTALLED_VSC} ${REPO_VSC}
 
   elif [ $input = 'no' ] || [ $input = 'NO' ] || [ $input = 'n' ] ; then
 
@@ -117,17 +121,19 @@ ETC_IGNORED="-v -e bash.bash_logout
 
 diff -r ${INSTALLED_ETC} ${REPO_ETC} | grep ${ETC_IGNORED}
 diff ${INSTALLED_BIN} ${REPO_BIN}
+diff ${INSTALLED_VSC} ${REPO_VSC}
 }
 
 # arg $1 is local
 function UpdateVersionNumber() {
   echo "getversionを更新します"
-  sed -i -E "s/\[local\][0-9]{12}/\[localenv\]`date "+%Y%m%d%H%M"`/g" ${INSTALLED_BIN}getversion
-  sed -i -E "s/\[local\][0-9]{8}/\[localenv\]`date "+%Y%m%d"`/g" ${INSTALLED_BIN}getversion
+  sed -i -E "s/\[localenv\][0-9]{12}/\[localenv\]`date "+%Y%m%d%H%M"`/g" ${INSTALLED_BIN}getversion
+  sed -i -E "s/\[localenv\][0-9]{8}/\[localenv\]`date "+%Y%m%d"`/g" ${INSTALLED_BIN}getversion
 }
 
 RsyncEnvironment ${INSTALLED_ETC} ${REPO_ETC} --dry-run
 RsyncEnvironment ${INSTALLED_BIN} ${REPO_BIN} --dry-run
+RsyncEnvironment ${INSTALLED_VSC} ${REPO_VSC} --dry-run
 CheckDiff
 
 ConfirmExecution
